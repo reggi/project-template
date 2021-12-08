@@ -1,14 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native';
+import React, { FC, useEffect, useState } from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-import React from 'react';
+function useRandomNumber() {
+  const [number, setNumber] = useState<number>()
 
-export default function App() {
+  useEffect(() => {
+    fetch('api/randomNumber')
+      .then(async (response) => await response.text())
+      .then((text) => setNumber(+text))
+  }, [])
+
+  return number
+}
+
+export const Index: FC = () => {
+  const number = useRandomNumber()
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Expo + Next.js 👋</Text>
+      <Text style={styles.text}>Welcome to Expo + Next.js</Text>
+      <Text>Random Number: {number}</Text>
     </View>
-  );
+  )
 }
+
+export default Index
 
 const styles = StyleSheet.create({
   container: {
@@ -19,4 +34,4 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
   },
-});
+})
