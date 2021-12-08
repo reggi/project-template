@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "android": "expo start --android",
+    "build": "next build",
+    "eject": "expo eject",
+    "ios": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --ios",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "web": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --web",
+    "sort": "npx sort-package-json",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "expo": "^43.0.3",
+    "next": "^12.0.7",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-native": "^0.64.2",
+    "react-native-web": "^0.17.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-private-methods": "^7.16.0",
+    "@expo/next-adapter": "^3.1.11",
+    "next-compose-plugins": "^2.2.1",
+    "next-fonts": "^1.5.1",
+    "next-images": "^1.8.4",
+    "next-transpile-modules": "^9.0.0"
+  }
+}
