@@ -1,11 +1,13 @@
 import React, { FC, useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import {fetch} from 'whatwg-fetch'
+
 function useRandomNumber() {
   const [number, setNumber] = useState<number>()
 
   useEffect(() => {
-    fetch('api/randomNumber')
+    fetch('http://localhost:3000/api/randomNumber')
       .then(async (response) => await response.text())
       .then((text) => setNumber(+text))
   }, [])
