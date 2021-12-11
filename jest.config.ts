@@ -5,7 +5,7 @@ import { defaults as tsjPreset } from 'ts-jest/presets'
 const config: InitialOptionsTsJest = {
   globals: {
     'ts-jest': {
-      tsconfig: '<rootDir>/__tests__/tsconfig.json',
+      tsconfig: '<rootDir>/tests/tsconfig.json',
     },
   },
   "preset": "react-native",
@@ -17,7 +17,7 @@ const config: InitialOptionsTsJest = {
   "transform": {
     ...tsjPreset.transform
   },
-  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
   "testPathIgnorePatterns": [
     "\\.snap$",
     "<rootDir>/node_modules/"
