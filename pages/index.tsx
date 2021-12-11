@@ -13,6 +13,34 @@ const StyledText = styled.Text`
   color: palevioletred;
 `
 
+export const StyledComponentExample = () => (
+  <StyledView>
+    <StyledText>Hello World!</StyledText>
+  </StyledView>
+)
+
+export const PaperComponentExample = () => (
+  <Button
+    icon="camera"
+    mode="contained"
+    onPress={() => console.log("Pressed")}
+  >
+    Press me
+  </Button>
+)
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 16,
+  },
+});
+
+
 function useRandomNumber() {
   const [number, setNumber] = useState<number>();
 
@@ -25,35 +53,22 @@ function useRandomNumber() {
   return number;
 }
 
-export const Index: FC = () => {
+export const HookFetchExample = () => {
   const number = useRandomNumber();
+  return (
+    <Text>Random Number: {number}</Text>
+  )
+}
+
+export const Index: FC = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Welcome to Expo + Next.js</Text>
-      <Text>Random Number: {number}</Text>
-      <Button
-        icon="camera"
-        mode="contained"
-        onPress={() => console.log("Pressed")}
-      >
-        Press me
-      </Button>
-      <StyledView>
-        <StyledText>Hello World!</StyledText>
-      </StyledView>
+      <HookFetchExample/>
+      <PaperComponentExample/>
+      <StyledComponentExample/>
     </View>
   );
 };
 
 export default Index;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 16,
-  },
-});

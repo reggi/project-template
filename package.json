@@ -13,7 +13,9 @@
     "sort": "npx sort-package-json",
     "start": "source .env-base && next dev",
     "test": "source .env-test && jest",
-    "web": "source .env-base && expo start --web"
+    "web": "source .env-base && expo start --web",
+    "storybook": "source .env-base && start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@nestjs/common": "^8.2.3",
@@ -40,6 +42,10 @@
     "@babel/plugin-proposal-decorators": "^7.16.4",
     "@babel/plugin-proposal-private-methods": "^7.16.0",
     "@expo/next-adapter": "^3.1.11",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@types/jest": "^27.0.3",
     "@types/react": "^17.0.37",
     "@types/react-native": "^0.66.8",
