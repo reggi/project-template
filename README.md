@@ -10,5 +10,5 @@ Checklist:
 - [x] decorators
 - [x] ~mui~ paper with icons
 - [x] styled-components
-- [ ] storybook
+- [x] storybook
 - [ ] typeorm
