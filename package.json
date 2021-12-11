@@ -6,14 +6,14 @@
     "eject": "expo eject",
     "format": "prettier --write .",
     "postinstall": "patch-package",
-    "ios": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --ios",
+    "ios": "source .env-base && expo start --ios",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "lint-fix": "yarn lint --fix",
     "nuke": "rm -rf ./node_modules && rm -rf ./.jest && yarn",
     "sort": "npx sort-package-json",
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && next dev",
-    "test": "NODE_OPTIONS='--experimental-vm-modules --experimental-specifier-resolution=node' jest",
-    "web": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --web"
+    "start": "source .env-base && next dev",
+    "test": "source .env-test && jest",
+    "web": "source .env-base && expo start --web"
   },
   "dependencies": {
     "@nestjs/common": "^8.2.3",
