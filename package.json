@@ -3,6 +3,7 @@
   "scripts": {
     "android": "expo start --android",
     "build": "next build",
+    "build-storybook": "build-storybook",
     "eject": "expo eject",
     "format": "prettier --write .",
     "postinstall": "patch-package",
@@ -12,10 +13,9 @@
     "nuke": "rm -rf ./node_modules && rm -rf ./.jest && yarn",
     "sort": "npx sort-package-json",
     "start": "source .env-base && next dev",
-    "test": "source .env-test && jest",
-    "web": "source .env-base && expo start --web",
     "storybook": "source .env-base && start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "source .env-test && jest",
+    "web": "source .env-base && expo start --web"
   },
   "dependencies": {
     "@nestjs/common": "^8.2.3",
