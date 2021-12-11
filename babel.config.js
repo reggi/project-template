@@ -6,5 +6,6 @@ module.exports = {
     "babel-plugin-parameter-decorator",
     ["@babel/plugin-proposal-private-methods", { loose: true }],
     ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
+    "react-native-paper/babel",
   ],
 };

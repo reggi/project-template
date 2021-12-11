@@ -9,10 +9,10 @@
     "ios": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --ios",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "lint-fix": "yarn lint --fix",
-    "reset": "jest --clearCache",
+    "nuke": "rm -rf ./node_modules && rm -rf ./.jest && yarn",
     "sort": "npx sort-package-json",
     "start": "export NODE_OPTIONS=--openssl-legacy-provider && next dev",
-    "test": "jest",
+    "test": "NODE_OPTIONS='--experimental-vm-modules --experimental-specifier-resolution=node' jest",
     "web": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --web"
   },
   "dependencies": {
@@ -20,12 +20,16 @@
     "@nestjs/core": "^8.2.3",
     "@nestjs/platform-express": "^8.2.3",
     "expo": "^43.0.3",
+    "expo-constants": "~12.1.3",
+    "expo-modules-core": "~0.4.9",
     "next": "^12.0.7",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-native": "^0.64.2",
+    "react-native-paper": "^4.11.0",
+    "react-native-vector-icons": "^9.0.0",
     "react-native-web": "^0.17.5",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0"
@@ -53,7 +57,7 @@
     "next-transpile-modules": "^9.0.0",
     "prettier": "^2.0.2",
     "react-test-renderer": "^17.0.2",
-    "ts-jest": "^27.1.0",
+    "ts-jest": "^27.1.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
     "whatwg-fetch": "^3.6.2"

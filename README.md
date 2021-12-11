@@ -6,9 +6,9 @@ Checklist:
 - [x] nest.js
 - [x] typescript
 - [x] eslint
-- [ ] prettier
-- [ ] mui
-- [ ] decorators
+- [x] prettier
+- [x] decorators
+- [x] ~mui~ paper with icons
 - [ ] styled-components
-- [ ] typeorm
 - [ ] storybook
+- [ ] typeorm

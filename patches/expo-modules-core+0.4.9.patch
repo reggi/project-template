@@ -1,0 +1,37 @@
+diff --git a/node_modules/expo-modules-core/build/NativeModulesProxy.native.js b/node_modules/expo-modules-core/build/NativeModulesProxy.native.js
+index 30f3f05..76eaa42 100644
+--- a/node_modules/expo-modules-core/build/NativeModulesProxy.native.js
++++ b/node_modules/expo-modules-core/build/NativeModulesProxy.native.js
+@@ -39,7 +39,7 @@ if (NativeProxy) {
+     });
+ }
+ else {
+-    console.warn(`The "EXNativeModulesProxy" native module is not exported through NativeModules; verify that expo-modules-core's native code is linked properly`);
++    // console.warn(`The "EXNativeModulesProxy" native module is not exported through NativeModules; verify that expo-modules-core's native code is linked properly`);
+ }
+ export default NativeModulesProxy;
+ //# sourceMappingURL=NativeModulesProxy.native.js.map
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/src/NativeModulesProxy.native.ts b/node_modules/expo-modules-core/src/NativeModulesProxy.native.ts
+index 39044a2..d9b45c2 100644
+--- a/node_modules/expo-modules-core/src/NativeModulesProxy.native.ts
++++ b/node_modules/expo-modules-core/src/NativeModulesProxy.native.ts
+@@ -1,5 +1,4 @@
+ import { NativeModules } from 'react-native';
+-
+ import { ProxyNativeModule } from './NativeModulesProxy.types';
+ 
+ const NativeProxy = NativeModules.NativeUnimoduleProxy;
+@@ -51,9 +50,9 @@ if (NativeProxy) {
+     }
+   });
+ } else {
+-  console.warn(
+-    `The "EXNativeModulesProxy" native module is not exported through NativeModules; verify that expo-modules-core's native code is linked properly`
+-  );
++  // console.warn(
++  //   `The "EXNativeModulesProxy" native module is not exported through NativeModules; verify that expo-modules-core's native code is linked properly`
++  // );
+ }
+ 
+ export default NativeModulesProxy;

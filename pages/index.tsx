@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { Button } from "react-native-paper";
 import { fetch } from "whatwg-fetch";
 
 function useRandomNumber() {
@@ -21,6 +22,13 @@ export const Index: FC = () => {
     <View style={styles.container}>
       <Text style={styles.text}>Welcome to Expo + Next.js</Text>
       <Text>Random Number: {number}</Text>
+      <Button
+        icon="camera"
+        mode="contained"
+        onPress={() => console.log("Pressed")}
+      >
+        Press me
+      </Button>
     </View>
   );
 };
