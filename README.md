@@ -9,6 +9,6 @@ Checklist:
 - [x] prettier
 - [x] decorators
 - [x] ~mui~ paper with icons
-- [ ] styled-components
+- [x] styled-components
 - [ ] storybook
 - [ ] typeorm

@@ -134,5 +134,26 @@ exports[`should render index page 1`] = `
       </View>
     </View>
   </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "papayawhip",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "palevioletred",
+          },
+        ]
+      }
+    >
+      Hello World!
+    </Text>
+  </View>
 </View>
 `;

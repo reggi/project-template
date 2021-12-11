@@ -3,6 +3,15 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Button } from "react-native-paper";
 import { fetch } from "whatwg-fetch";
+import styled from 'styled-components/native'
+
+const StyledView = styled.View`
+  background-color: papayawhip;
+`
+
+const StyledText = styled.Text`
+  color: palevioletred;
+`
 
 function useRandomNumber() {
   const [number, setNumber] = useState<number>();
@@ -29,6 +38,9 @@ export const Index: FC = () => {
       >
         Press me
       </Button>
+      <StyledView>
+        <StyledText>Hello World!</StyledText>
+      </StyledView>
     </View>
   );
 };
