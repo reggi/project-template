@@ -4,3 +4,4 @@
 **/.expo/*
 **/.jest/*
 **/patches/*
+**/web-build/*
