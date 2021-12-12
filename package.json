@@ -7,15 +7,15 @@
     "eject": "expo eject",
     "format": "prettier --write .",
     "postinstall": "patch-package",
-    "ios": "source .env-base && expo start --ios",
+    "ios": "source env-base.sh && expo start --ios",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "lint-fix": "yarn lint --fix",
     "nuke": "rm -rf ./node_modules && rm -rf ./.jest && yarn",
     "sort": "npx sort-package-json",
-    "start": "source .env-base && next dev",
-    "storybook": "source .env-base && start-storybook -p 6006",
-    "test": "source .env-test && jest",
-    "web": "source .env-base && expo start --web"
+    "start": "source env-base.sh && next dev",
+    "storybook": "source env-base.sh && start-storybook -p 6006",
+    "test": "source env-test.sh && jest",
+    "web": "source env-base.sh && expo start --web"
   },
   "dependencies": {
     "@nestjs/common": "^8.2.3",

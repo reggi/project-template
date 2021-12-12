@@ -13,6 +13,14 @@
 - [x] storybook
 - [x] typeorm
 
+# Usage
+
+* `yarn start` runs next.js with nest.js as the api
+* `yarn web` runs the web-app through expo
+* `yarn ios` runs the ios simulator, but you will need to run a backend as well (`yarn start`)
+* `yarn test` runs jest tests
+* `yarn storybook` runs storybook (react-native-web / paper / styled-components)
+
 # Resources
 
 * https://github.com/expo/examples/tree/master/with-nextjs
