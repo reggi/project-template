@@ -4,6 +4,7 @@
     "android": "expo start --android",
     "build": "next build",
     "build-storybook": "build-storybook",
+    "dev": "yarn start",
     "eject": "expo eject",
     "format": "prettier --write .",
     "postinstall": "patch-package",
